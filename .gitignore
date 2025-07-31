@@ -2,3 +2,5 @@ raycast/
 zsh/.zsh_history
 zsh-abbr
 zsh/.zshrc.zwc
+
+zsh/.zcompdump
