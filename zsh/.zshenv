@@ -8,6 +8,8 @@ export XDG_STATE_HOME=${HOME}/.local/state
 export PATH=${HOME}/.local/bin:$PATH
 export PATH="/usr/local/sbin:$PATH"
 
+export ZDOTDIR=$HOME/.config/zsh
+
 # lang
 export LANGUAGE="en_US.UTF-8"
 export LANG="${LANGUAGE}"

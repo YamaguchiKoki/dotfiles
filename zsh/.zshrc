@@ -1,6 +1,5 @@
+source ${ZDOTDIR}/extras.zsh
 eval "$(/opt/homebrew/bin/brew shellenv)"
-
-eval "$(starship init zsh)"
 
 # setting
 # 新規ファイル作成時のパーミッション
@@ -59,3 +58,5 @@ abbr -S gcm='git commit' >>/dev/null
 abbr -S gmg='git merge' >>/dev/null
 abbr -S gpsh='git push' >>/dev/null
 abbr -S lg='lazygit' >>/dev/null
+
+eval "$(starship init zsh)"
