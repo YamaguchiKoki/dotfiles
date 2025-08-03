@@ -1,0 +1,13 @@
+[core]
+    quotepath = false
+[user]
+    name = YamaguchiKoki
+    email = shankouhanghui15@gmail.com
+[credential "https://github.com"]
+    helper =
+    helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+    helper =
+    helper = !/opt/homebrew/bin/gh auth git-credential
+[ghq]
+    root = /Users/kokiyamaguchi/Documents/projects/git
