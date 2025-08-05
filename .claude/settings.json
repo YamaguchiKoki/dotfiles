@@ -1,0 +1,11 @@
+{
+  "env": {},
+  "includeCoAuthoredBy": false,
+  "permissions": {
+    "allow": [
+      "WebFetch",
+      "Bash"
+    ]
+  },
+  "autoUpdaterStatus": false
+}
