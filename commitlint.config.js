@@ -75,7 +75,7 @@ module.exports = defineConfig({
         emoji: "⏪️",
       },
     ],
-    useEmoji: true,
+    useEmoji: false,
     emojiAlign: "center",
     useAI: false,
     aiNumber: 1,
