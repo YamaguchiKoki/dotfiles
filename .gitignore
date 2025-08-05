@@ -6,3 +6,6 @@ zsh/.zshrc.zwc
 zsh/.zcompdump
 mise
 gh
+
+# Claude Code generated files
+.claude/.mcp-claude-code.json
