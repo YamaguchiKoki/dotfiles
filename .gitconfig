@@ -11,3 +11,15 @@
     helper = !/opt/homebrew/bin/gh auth git-credential
 [ghq]
     root = /Users/kokiyamaguchi/Documents/projects/git
+[merge]
+    tool = nvimdiff
+[mergetool]
+    prompt = false
+[mergetool "nvimdiff"]
+    cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+[diff]
+    tool = nvimdiff
+[difftool]
+    prompt = false
+[difftool "nvimdiff"]
+    cmd = nvim -d $LOCAL $REMOTE
