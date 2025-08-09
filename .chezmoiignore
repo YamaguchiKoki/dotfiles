@@ -1,0 +1,30 @@
+# 履歴ファイル
+**/.zsh_history
+**/zsh_history
+**/.bash_history
+
+# キャッシュ・一時ファイル
+**/.zcompdump*
+**/zcompdump*
+**/.zsh_sessions
+**/*.zwc
+
+# エディタ関連
+**/lazy-lock.json
+**/.netrwhist
+**/undodir
+
+# macOS
+.DS_Store
+
+# Git（chezmoiソース自体のGit管理用）
+.git
+.gitignore
+
+# テスト用ファイル
+Dockerfile.test*
+docker-compose.test.yml
+test.sh
+
+# README
+README.md
