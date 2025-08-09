@@ -1,4 +1,3 @@
-source ~/.zshrc
 source ${ZDOTDIR}/extras.zsh
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
