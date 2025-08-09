@@ -1,0 +1,29 @@
+#!/usr/bin/env zsh
+
+{{ if eq .chezmoi.os "darwin" -}}
+echo "==================================="
+echo "Installing npm global packages..."
+echo "==================================="
+
+# Ensure npm is available
+if ! command -v npm &>/dev/null; then
+    echo "npm not found. Please install Node.js first."
+    exit 1
+fi
+
+# Global npm packages (essential only)
+npm_packages=(
+    "@anthropic-ai/claude-code"
+    "czg"
+    "cz-git"  # Required by commitlint.config.js
+)
+
+for package in "${npm_packages[@]}"; do
+    echo "Installing $package..."
+    npm install -g "$package" || echo "Warning: Failed to install $package (may already exist)"
+done
+
+echo "==================================="
+echo "npm packages installation complete!"
+echo "==================================="
+{{- end }}
