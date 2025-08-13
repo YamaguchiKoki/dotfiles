@@ -61,3 +61,4 @@ abbr -S gpsh='git push' >>/dev/null
 abbr -S lg='lazygit' >>/dev/null
 
 eval "$(starship init zsh)"
+export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:$HOME/Documents/projects/git/personal/ac-library"
