@@ -13,7 +13,6 @@
       la = "ls -A";
       lla = "ls -l -A";
       lg = "lazygit";
-      npm-global = "echo 'Use nix-npm-search instead! Global npm installs are disabled.'";
     };
 
 

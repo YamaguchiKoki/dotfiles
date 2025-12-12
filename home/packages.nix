@@ -20,5 +20,6 @@
     starship
     tree
     uv
+    typescript
   ];
 }
