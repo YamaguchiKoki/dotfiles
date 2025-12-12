@@ -15,7 +15,8 @@
     neovim
     nodejs
     nodePackages.pnpm
-    nodePackages.cz-git
+    cz-cli
+    nodePackages.commitizen  # cz-cli のヘルパー
     protobuf
     starship
     tree
