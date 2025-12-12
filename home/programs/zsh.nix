@@ -2,7 +2,7 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-test
+
     dotDir = ".config/zsh";  # Warning: relative paths deprecated, but still works
 
     shellAliases = {
