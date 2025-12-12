@@ -3,7 +3,7 @@
     enable = true;
     enableCompletion = true;
 
-    dotDir = ".config/zsh";
+    dotDir = ".config/zsh";  # Warning: relative paths deprecated, but still works
 
     shellAliases = {
       ls = "ls -F --color=auto";

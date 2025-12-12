@@ -2,11 +2,6 @@
   programs.git = {
     enable = true;
 
-    userName = "YamaguchiKoki";
-    userEmail = "shankouhanghui15@gmail.com";
-
-    delta.enable = true;
-
     ignores = [
       ".DS_Store"
       "node_modules/"
@@ -16,7 +11,12 @@
       ".vscode/"
     ];
 
-    extraConfig = {
+    settings = {
+      user = {
+        name = "YamaguchiKoki";
+        email = "shankouhanghiu15@gmail.com";
+      };
+
       core = {
         quotepath = false;
       };
@@ -57,5 +57,11 @@
         cmd = "nvim -d $LOCAL $REMOTE";
       };
     };
+  };
+
+  # Delta pager configuration
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
   };
 }
