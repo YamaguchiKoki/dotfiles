@@ -18,6 +18,12 @@
         [ pkgs.vim
         ];
 
+      # User configuration
+      users.users.kokiyamaguchi = {
+        name = "kokiyamaguchi";
+        home = "/Users/kokiyamaguchi";
+      };
+
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
 
@@ -45,6 +51,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
+          home-manager.backupFileExtension = "backup";
           home-manager.users.kokiyamaguchi = import ./home;
         }
       ];

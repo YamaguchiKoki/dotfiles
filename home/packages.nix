@@ -4,7 +4,7 @@
     gcc
     gh
     ghq
-    git-delta
+    delta  # git-delta
     go
     jq
     k6
@@ -15,6 +15,7 @@
     neovim
     nodejs
     nodePackages.pnpm
+    cz-cli
     protobuf
     starship
     tree

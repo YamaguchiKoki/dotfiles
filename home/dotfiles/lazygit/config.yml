@@ -1,0 +1,18 @@
+# https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md
+
+customCommands:
+  - command: NODE_PATH=/opt/homebrew/lib/node_modules /opt/homebrew/bin/czg
+    context: files
+    key: c
+    output: terminal
+gui:
+  language: "ja"
+  showIcons: true
+# log customize
+git:
+  branchLogCmd: "git log --graph --color=always --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' {{branchName}} --"
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
+  allBranchesLogCmds:
+    - git log --graph --color=always --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all
