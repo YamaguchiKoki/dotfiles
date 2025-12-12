@@ -1,7 +1,7 @@
 # https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md
 
 customCommands:
-  - command: NODE_PATH=/opt/homebrew/lib/node_modules /opt/homebrew/bin/czg
+  - command: cz
     context: files
     key: c
     output: terminal
