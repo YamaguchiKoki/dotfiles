@@ -34,6 +34,7 @@ module.exports = defineConfig({
         name: "docs:     📝  Documentation only changes",
         emoji: "📝",
       },
+
       {
         value: "style",
         name: "style:    💄  Changes that do not affect the meaning of the code",
