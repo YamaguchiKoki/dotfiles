@@ -32,7 +32,7 @@
     syntaxHighlighting.enable = true;
     autosuggestion.enable = true;
 
-    initExtra = ''
+    initContent = ''
       # XDG
       export XDG_CONFIG_HOME=''${HOME}/.config
       export XDG_CACHE_HOME=''${HOME}/.cache
