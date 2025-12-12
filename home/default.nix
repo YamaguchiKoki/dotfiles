@@ -26,6 +26,6 @@
     ".config/nvim".source = ./dotfiles/nvim;
     ".config/wezterm".source = ./dotfiles/wezterm;
     ".config/lazygit".source = ./dotfiles/lazygit;
-    ".config/commitlint.config.js".source = ./dotfiles/commitlint.config.js;
+    ".commitlintrc.js".source = ./dotfiles/commitlint.config.js;
   };
 }

@@ -16,6 +16,7 @@
       npm-global = "echo 'Use nix-npm-search instead! Global npm installs are disabled.'";
     };
 
+
     history = {
       size = 100000;
       save = 100000;
