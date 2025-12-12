@@ -2,7 +2,7 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-
+test
     dotDir = ".config/zsh";  # Warning: relative paths deprecated, but still works
 
     shellAliases = {
@@ -13,6 +13,7 @@
       la = "ls -A";
       lla = "ls -l -A";
       lg = "lazygit";
+      npm-global = "echo 'Use nix-npm-search instead! Global npm installs are disabled.'";
     };
 
     history = {
