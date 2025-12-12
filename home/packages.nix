@@ -16,7 +16,6 @@
     nodejs
     nodePackages.pnpm
     cz-cli
-    nodePackages.commitizen  # cz-cli のヘルパー
     protobuf
     starship
     tree
