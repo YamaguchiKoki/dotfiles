@@ -73,19 +73,19 @@
 
       font = {
         normal = {
-          family = "Hack Nerd Font";
+          family = "HackNerdFontMono";
           style = "Regular";
         };
         bold = {
-          family = "Hack Nerd Font";
+          family = "HackNerdFontMono";
           style = "Bold";
         };
         italic = {
-          family = "Hack Nerd Font";
+          family = "HackNerdFontMono";
           style = "Italic";
         };
         bold_italic = {
-          family = "Hack Nerd Font";
+          family = "HackNerdFontMono";
           style = "Bold Italic";
         };
         size = 14.0;
