@@ -24,7 +24,6 @@
   # Copy dotfiles that don't have native Home Manager support
   home.file = {
     ".config/nvim".source = ./dotfiles/nvim;
-    ".config/wezterm".source = ./dotfiles/wezterm;
     ".czrc".source = ./dotfiles/czrc;
   };
 }
