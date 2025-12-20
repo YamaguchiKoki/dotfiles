@@ -35,6 +35,38 @@
         multiplier = 3;
       };
 
+      keyboard.bindings = [
+        # 新しいウィンドウ作成: Command + T
+        { key = "T"; mods = "Command"; chars = "\\u0002c"; }
+
+        # 横分割(上下): Command + D
+        { key = "D"; mods = "Command"; chars = "\\u0002\\\""; }
+
+        # 縦分割(左右): Command + Shift + D
+        { key = "D"; mods = "Command|Shift"; chars = "\\u0002%"; }
+
+        # window移動(left): Shift + Command + [
+        { key = "LBracket"; mods = "Command|Shift"; chars = "\\u0002p"; }
+
+        # window移動(right): Shift + Command + ]
+        { key = "RBracket"; mods = "Command|Shift"; chars = "\\u0002n"; }
+
+        # コピーモードに入る: Command + [
+        { key = "LBracket"; mods = "Command"; chars = "\\u0002["; }
+
+        # ペイン移動: Command + h/j/k/l
+        { key = "H"; mods = "Command"; chars = "\\u0002h"; }  # 左
+        { key = "J"; mods = "Command"; chars = "\\u0002j"; }  # 下
+        { key = "K"; mods = "Command"; chars = "\\u0002k"; }  # 上
+        { key = "L"; mods = "Command"; chars = "\\u0002l"; }  # 右
+
+        # ペインサイズ調整: Command + 矢印キー
+        { key = "Left"; mods = "Command"; chars = "\\u0002:resize-pane -L 5\\r"; }   # 左に拡大
+        { key = "Right"; mods = "Command"; chars = "\\u0002:resize-pane -R 5\\r"; }  # 右に拡大
+        { key = "Up"; mods = "Command"; chars = "\\u0002:resize-pane -U 5\\r"; }     # 上に拡大
+        { key = "Down"; mods = "Command"; chars = "\\u0002:resize-pane -D 5\\r"; }   # 下に拡大
+      ];
+
       font = {
         normal = {
           family = "Hack Nerd Font";
