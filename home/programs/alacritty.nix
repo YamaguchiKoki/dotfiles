@@ -40,10 +40,10 @@
         { key = "T"; mods = "Command"; chars = "\\u0002c"; }
 
         # 横分割(上下): Command + D
-        { key = "D"; mods = "Command"; chars = "\\u0002\\\""; }
+        { key = "D"; mods = "Command"; chars = "\\u0002:split-window -v\\r"; }
 
         # 縦分割(左右): Command + Shift + D
-        { key = "D"; mods = "Command|Shift"; chars = "\\u0002%"; }
+        { key = "D"; mods = "Command|Shift"; chars = "\\u0002:split-window -h\\r"; }
 
         # window移動(left): Shift + Command + [
         { key = "LBracket"; mods = "Command|Shift"; chars = "\\u0002p"; }
