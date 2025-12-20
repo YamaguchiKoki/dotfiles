@@ -21,5 +21,7 @@
     tree
     uv
     typescript
+    alacritty
+    tmux
   ];
 }

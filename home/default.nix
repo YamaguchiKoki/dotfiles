@@ -25,7 +25,6 @@
   home.file = {
     ".config/nvim".source = ./dotfiles/nvim;
     ".config/wezterm".source = ./dotfiles/wezterm;
-    ".config/lazygit".source = ./dotfiles/lazygit;
     ".czrc".source = ./dotfiles/czrc;
   };
 }
