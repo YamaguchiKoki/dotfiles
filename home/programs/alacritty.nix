@@ -73,20 +73,12 @@
 
       font = {
         normal = {
-          family = "Hack Nerd Font Mono";
+          family = "HackGenConsoleNF";
           style = "Regular";
         };
         bold = {
-          family = "Hack Nerd Font Mono";
+          family = "HackGenConsoleNF";
           style = "Bold";
-        };
-        italic = {
-          family = "Hack Nerd Font Mono";
-          style = "Italic";
-        };
-        bold_italic = {
-          family = "Hack Nerd Font Mono";
-          style = "Bold Italic";
         };
         size = 14.0;
         offset = {
