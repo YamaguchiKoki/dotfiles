@@ -1,5 +1,5 @@
 {
-  description = "Example nix-darwin system flake";
+  description = "nix-darwin system flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -47,6 +47,7 @@
     darwinConfigurations."MacBook-Pro-2" = nix-darwin.lib.darwinSystem {
       modules = [
         configuration
+        ./system/defaults.nix
         home-manager.darwinModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
