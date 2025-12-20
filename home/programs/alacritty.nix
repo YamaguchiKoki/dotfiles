@@ -73,11 +73,11 @@
 
       font = {
         normal = {
-          family = "HackGenConsoleNF";
+          family = "HackGen Console NF";
           style = "Regular";
         };
         bold = {
-          family = "HackGenConsoleNF";
+          family = "HackGen Console NF";
           style = "Bold";
         };
         size = 14.0;
