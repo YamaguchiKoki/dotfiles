@@ -4,82 +4,111 @@
     enableZshIntegration = true;
 
     settings = {
-      format = "$directory[](fg:#88C0D0 bg:#394260)$git_branch$git_status[](fg:#394260)$fill[](fg:#212736)$nodejs$rust$golang$php[](fg:#1d2230 bg:#212736)$time[](fg:#88C0D0 bg:#1d2230)$os[](fg:#88C0D0)\n$character";
+      # シェルプロンプトの間に空行を追加
+      add_newline = true;
 
-      add_newline = false;
+      format = ''
+        [](fg:#7aa2f7)$os[ ](fg:#7aa2f7 bg:#1a1b26)$directory$git_branch$git_status$git_metrics[](fg:#1a1b26)$fill([](fg:#1a1b26)$nodejs[](fg:208 bg:#1a1b26)$package)([](fg:#1a1b26)$golang(bg:#1a1b26))
+        $character'';
 
-      fill = {
-        symbol = " ";
-      };
+      right_format = "$cmd_duration$time";
 
       os = {
         format = "[$symbol]($style)";
-        style = "fg:#2E3440 bg:#88C0D0 bold";
+        style = "fg:#1a1b26 bg:#7aa2f7";
         disabled = false;
         symbols = {
           Macos = "  ";
-          Ubuntu = "  ";
-          Debian = "  ";
         };
+      };
+
+      character = {
+        success_symbol = "[󰀵 > ](bold green)";
+        error_symbol = "[ > ](bold red)";
+      };
+
+      status = {
+        style = "red";
+        symbol = "🔴";
+        format = "[$common_meaning$signal_name$maybe_int $status]($style) ";
+        map_symbol = true;
+        disabled = false;
       };
 
       directory = {
-        style = "fg:#2E3440 bg:#88C0D0 bold";
-        format = "[ $path ]($style)";
-        truncation_length = 10;
+        truncation_length = 6;
+        truncation_symbol = " ";
         truncate_to_repo = false;
-        truncation_symbol = "…/";
-        substitutions = {
-          Documents = "󰈙 ";
-          Downloads = " ";
-          Music = " ";
-          Pictures = " ";
-        };
+        home_symbol = " ~";
+        style = "fg:#7aa2f7 bg:#1a1b26";
+        read_only = " 󰌾 ";
+        read_only_style = "fg:#f7768e bg:#1a1b26";
+        format = "[$path]($style)[$read_only]($read_only_style)";
       };
 
-      aws.disabled = true;
-      gcloud.disabled = true;
-
       git_branch = {
-        symbol = "";
-        style = "bg:#394260";
-        format = "[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)";
+        symbol = "  ";
+        truncation_symbol = "";
+        style = "fg:#7aa2f7 bg:#1a1b26";
+        format = "[  $symbol$branch(:$remote_branch)]($style)";
       };
 
       git_status = {
-        style = "bg:#394260";
-        format = "[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)";
+        style = "fg:#e0af68 bg:#1a1b26";
+        conflicted = "=";
+        ahead = "⇡\${count}";
+        behind = "⇣\${count}";
+        diverged = "⇕";
+        up_to_date = "✓";
+        untracked = "?";
+        stashed = "$";
+        modified = "!\${count}";
+        renamed = "»";
+        deleted = "✘";
+        format = "([$all_status$ahead_behind]($style))";
+      };
+
+      git_metrics = {
+        added_style = "fg:#9ece6a bg:#1a1b26";
+        deleted_style = "fg:#9ece6a bg:#1a1b26";
+        format = "[+$added/-$deleted]($deleted_style)";
+        disabled = false;
+      };
+
+      fill = {
+        symbol = "─";
+        style = "blue";
       };
 
       nodejs = {
-        symbol = "";
-        style = "bg:#212736";
-        format = "[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)";
-      };
-
-      rust = {
-        symbol = "";
-        style = "bg:#212736";
-        format = "[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)";
+        symbol = " ";
+        style = "fg:#9ece6a bg:#1a1b26";
+        format = "[via $symbol($version )]($style)";
       };
 
       golang = {
-        symbol = "";
-        style = "bg:#212736";
-        format = "[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)";
+        symbol = "  󰟓 ";
+        style = "fg:#79d4fd bg:#1a1b26";
+        format = "[via $symbol($version )]($style)";
       };
 
-      php = {
-        symbol = "";
-        style = "bg:#212736";
-        format = "[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)";
+      package = {
+        format = "[ $symbol$version ]($style)";
+        style = "fg:#000000 bg:208";
+      };
+
+      cmd_duration = {
+        min_time = 1;
+        style = "fg:#e0af68";
+        format = "[   $duration]($style)";
       };
 
       time = {
         disabled = false;
-        time_format = "%R";
-        style = "bg:#1d2230";
-        format = "[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)";
+        style = "fg:#73daca";
+        format = "[   $time]($style)";
+        time_format = "%T";
+        utc_time_offset = "+9";
       };
     };
   };
