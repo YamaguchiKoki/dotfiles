@@ -45,11 +45,9 @@
         # 縦分割(左右): Command + Shift + D
         { key = "D"; mods = "Command|Shift"; chars = ''\u0002%''; }
 
-        # window移動(left): Shift + Command + [
-        { key = "LBracket"; mods = "Command|Shift"; chars = ''\u0002p''; }
-
-        # window移動(right): Shift + Command + ]
-        { key = "RBracket"; mods = "Command|Shift"; chars = ''\u0002n''; }
+        # window移動: Option + Shift + ←/→
+        { key = "Left"; mods = "Shift|Alt"; chars = ''\u0002p''; }
+        { key = "Right"; mods = "Shift|Alt"; chars = ''\u0002n''; }
 
         # コピーモードに入る: Command + [
         { key = "LBracket"; mods = "Command"; chars = ''\u0002[''; }
