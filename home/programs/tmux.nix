@@ -25,6 +25,9 @@
       bind -r K resize-pane -U 5
       bind -r L resize-pane -R 5
 
+      # ペイン削除（確認なし）
+      bind w kill-pane
+
       # ステータスバーを上部に表示する
       set -g status-position top
 

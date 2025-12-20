@@ -54,8 +54,8 @@
         # コピーモードに入る: Command + [
         { key = "LBracket"; mods = "Command"; chars = ''\u0002[''; }
 
-        # ペイン/ウィンドウを閉じる: Command + W
-        { key = "W"; mods = "Command"; chars = ''\u0002x''; }
+        # ペイン/ウィンドウを閉じる（確認なし）: Command + W
+        { key = "W"; mods = "Command"; chars = ''\u0002w''; }
 
         # ペイン移動: Command + h/j/k/l
         { key = "H"; mods = "Command"; chars = ''\u0002h''; }  # 左
