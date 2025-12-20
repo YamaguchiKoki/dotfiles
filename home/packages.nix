@@ -22,6 +22,5 @@
     tree
     uv
     typescript
-    tmux
   ];
 }
