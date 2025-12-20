@@ -19,6 +19,12 @@
       bind -r h select-pane -L
       bind -r l select-pane -R
 
+      # ペインサイズ調整（prefix + 矢印キー）
+      bind -r Left resize-pane -L 5
+      bind -r Right resize-pane -R 5
+      bind -r Up resize-pane -U 5
+      bind -r Down resize-pane -D 5
+
       # ステータスバーを上部に表示する
       set -g status-position top
 

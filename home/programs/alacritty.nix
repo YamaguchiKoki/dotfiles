@@ -64,10 +64,10 @@
         { key = "L"; mods = "Command"; chars = ''\u0002l''; }  # 右
 
         # ペインサイズ調整: Command + 矢印キー
-        { key = "Left"; mods = "Command"; chars = "\\u0002:resize-pane -L 5\\r"; }   # 左に拡大
-        { key = "Right"; mods = "Command"; chars = "\\u0002:resize-pane -R 5\\r"; }  # 右に拡大
-        { key = "Up"; mods = "Command"; chars = "\\u0002:resize-pane -U 5\\r"; }     # 上に拡大
-        { key = "Down"; mods = "Command"; chars = "\\u0002:resize-pane -D 5\\r"; }   # 下に拡大
+        { key = "Left"; mods = "Command"; chars = ''\u0002\u001b[D''; }   # 左に拡大
+        { key = "Right"; mods = "Command"; chars = ''\u0002\u001b[C''; }  # 右に拡大
+        { key = "Up"; mods = "Command"; chars = ''\u0002\u001b[A''; }     # 上に拡大
+        { key = "Down"; mods = "Command"; chars = ''\u0002\u001b[B''; }   # 下に拡大
       ];
 
       font = {
