@@ -19,6 +19,7 @@
           y = 4;
         };
         opacity = 0.85;
+        startup_mode = "Fullscreen";  # or "Maximized"
       };
 
       cursor = {
