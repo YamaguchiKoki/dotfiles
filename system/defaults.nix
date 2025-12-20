@@ -1,4 +1,7 @@
 { ... }: {
+  # Primary user for user-level system defaults
+  system.primaryUser = "kokiyamaguchi";
+
   system.defaults = {
     # Dock settings
     dock = {
@@ -20,18 +23,15 @@
       AppleShowAllExtensions = true;
       ShowPathbar = true;
       ShowStatusBar = true;
-      FXDefaultSearchScope = "SCcf";
       FXEnableExtensionChangeWarning = false;
-      FXPreferredViewStyle = "Nlsv";
       _FXShowPosixPathInTitle = true;
     };
 
     # Global macOS settings
     NSGlobalDomain = {
-      # Mouse and trackpad
-      "com.apple.mouse.scaling" = 2.5;
-      "com.apple.trackpad.scaling" = 3.0;
+      # Scrollbar
       AppleShowScrollBars = "WhenScrolling";
+      "com.apple.trackpad.scaling" = 3.0;
 
       # Keyboard
       InitialKeyRepeat = 15;
@@ -40,7 +40,6 @@
 
       # Window and UI
       NSAutomaticWindowAnimationsEnabled = false;
-      AppleShowAllFiles = true;
 
       # Text editing
       NSAutomaticCapitalizationEnabled = false;
@@ -51,7 +50,6 @@
 
       # Menu and toolbar
       AppleInterfaceStyle = "Dark";
-      _HIHideMenuBar = false;
     };
 
     # Trackpad settings
@@ -65,29 +63,12 @@
     screencapture = {
       location = "~/Pictures/Screenshots";
       type = "png";
-      disable-shadow = false;
-    };
-
-    # Menu extra (system tray icons)
-    menuExtraClock = {
-      Show24Hour = true;
-      ShowDate = 1;
     };
 
     # Login window
     loginwindow = {
       GuestEnabled = false;
-      DisableConsoleAccess = true;
     };
-
-    # Other settings
-    ActivityMonitor = {
-      IconType = 5;
-      ShowCategory = 100;
-    };
-
-    # Spaces
-    spaces.spans-displays = false;
   };
 
   # Keyboard
