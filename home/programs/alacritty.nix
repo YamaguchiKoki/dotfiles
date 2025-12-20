@@ -72,6 +72,22 @@
       ];
 
       font = {
+        normal = {
+          family = "Hack Nerd Font Mono";
+          style = "Regular";
+        };
+        bold = {
+          family = "Hack Nerd Font Mono";
+          style = "Bold";
+        };
+        italic = {
+          family = "Hack Nerd Font Mono";
+          style = "Italic";
+        };
+        bold_italic = {
+          family = "Hack Nerd Font Mono";
+          style = "Bold Italic";
+        };
         size = 14.0;
         offset = {
           x = 0;
