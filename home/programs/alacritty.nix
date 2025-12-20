@@ -2,6 +2,10 @@
   programs.alacritty = {
     enable = true;
     settings = {
+      shell = {
+        program = "${pkgs.tmux}/bin/tmux";
+        args = [ "new-session" "-A" "-s" "main" ];
+      };
       general = {
         import = [
           "${pkgs.alacritty-theme}/miasma.toml"
