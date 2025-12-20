@@ -2,7 +2,7 @@
   programs.alacritty = {
     enable = true;
     settings = {
-      shell = {
+      terminal.shell = {
         program = "${pkgs.tmux}/bin/tmux";
         args = [ "new-session" "-A" "-s" "main" ];
       };
