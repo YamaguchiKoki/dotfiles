@@ -72,14 +72,6 @@
       ];
 
       font = {
-        normal = {
-          family = "HackGen Console NF";
-          style = "Regular";
-        };
-        bold = {
-          family = "HackGen Console NF";
-          style = "Bold";
-        };
         size = 14.0;
         offset = {
           x = 0;
