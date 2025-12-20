@@ -18,7 +18,7 @@
         style = "fg:#1a1b26 bg:#7aa2f7";
         disabled = false;
         symbols = {
-          Macos = "  ";
+          Macos = " ";
         };
       };
 
@@ -37,20 +37,20 @@
 
       directory = {
         truncation_length = 6;
-        truncation_symbol = " ";
+        truncation_symbol = "…/";
         truncate_to_repo = false;
-        home_symbol = " ~";
+        home_symbol = "~";
         style = "fg:#7aa2f7 bg:#1a1b26";
-        read_only = " 󰌾 ";
+        read_only = " 󰌾";
         read_only_style = "fg:#f7768e bg:#1a1b26";
         format = "[$path]($style)[$read_only]($read_only_style)";
       };
 
       git_branch = {
-        symbol = "  ";
+        symbol = "";
         truncation_symbol = "";
         style = "fg:#7aa2f7 bg:#1a1b26";
-        format = "[  $symbol$branch(:$remote_branch)]($style)";
+        format = "[ $symbol $branch(:$remote_branch) ]($style)";
       };
 
       git_status = {
@@ -81,15 +81,15 @@
       };
 
       nodejs = {
-        symbol = " ";
+        symbol = "";
         style = "fg:#9ece6a bg:#1a1b26";
-        format = "[via $symbol($version )]($style)";
+        format = "[ $symbol($version) ]($style)";
       };
 
       golang = {
-        symbol = "  󰟓 ";
+        symbol = "󰟓";
         style = "fg:#79d4fd bg:#1a1b26";
-        format = "[via $symbol($version )]($style)";
+        format = "[ $symbol($version) ]($style)";
       };
 
       package = {
@@ -100,13 +100,13 @@
       cmd_duration = {
         min_time = 1;
         style = "fg:#e0af68";
-        format = "[   $duration]($style)";
+        format = "[ $duration]($style)";
       };
 
       time = {
         disabled = false;
         style = "fg:#73daca";
-        format = "[   $time]($style)";
+        format = "[  $time]($style)";
         time_format = "%T";
         utc_time_offset = "+9";
       };
