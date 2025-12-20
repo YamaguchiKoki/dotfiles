@@ -1,9 +1,9 @@
-{ pkgs, ... }: {
+{ pkgs, config, ... }: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
 
-    dotDir = ".config/zsh";  # Warning: relative paths deprecated, but still works
+    dotDir = "${config.xdg.configHome}/zsh";
 
     shellAliases = {
       ls = "ls -F --color=auto";
