@@ -1,5 +1,7 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
+    # Nerd Fonts
+    (nerdfonts.override { fonts = [ "Hack" ]; })
     fzf
     gcc
     gh
@@ -21,7 +23,6 @@
     tree
     uv
     typescript
-    alacritty
     tmux
   ];
 }

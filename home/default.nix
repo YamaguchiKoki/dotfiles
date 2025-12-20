@@ -7,6 +7,7 @@
     ./programs/starship.nix
     ./programs/lazygit.nix
     ./programs/nodejs.nix
+    ./programs/alacritty.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should manage.
@@ -15,6 +16,9 @@
 
   # Enable XDG directories
   xdg.enable = true;
+
+  # Enable font management
+  fonts.fontconfig.enable = true;
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
