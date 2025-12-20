@@ -1,7 +1,6 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    # Nerd Fonts
-    (pkgs.nerdfonts.override { fonts = [ "Hack" ]; })
+    (pkgs.nerd-fonts.override { fonts = [ "Hack" ]; })
     fzf
     gcc
     gh
