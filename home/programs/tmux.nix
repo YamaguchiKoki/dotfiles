@@ -10,6 +10,11 @@
       bind -n S-left previous-window
       bind -n S-right next-window
 
+      # 分割時に現在のディレクトリを継承
+      bind '"' split-window -v -c "#{pane_current_path}"
+      bind % split-window -h -c "#{pane_current_path}"
+      bind c new-window -c "#{pane_current_path}"
+
       # prefix+r で設定のリロード
       bind r source-file ${config.xdg.configHome}/tmux/tmux.conf \; display "Reloaded!"
 
