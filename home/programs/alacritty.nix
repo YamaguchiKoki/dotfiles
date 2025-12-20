@@ -6,9 +6,8 @@
         import = [
           "${pkgs.alacritty-theme}/miasma.toml"
         ];
+        live_config_reload = true;
       };
-
-      live_config_reload = true;
 
       window = {
         dimensions = {
