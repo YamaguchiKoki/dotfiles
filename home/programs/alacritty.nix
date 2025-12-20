@@ -66,6 +66,9 @@
         { key = "Right"; mods = "Command"; chars = ''\u0002L''; }  # 右に拡大
         { key = "Up"; mods = "Command"; chars = ''\u0002K''; }     # 上に拡大
         { key = "Down"; mods = "Command"; chars = ''\u0002J''; }   # 下に拡大
+
+        # Shift + Enter で改行
+        { key = "Return"; mods = "Shift"; chars = "\n"; }
       ];
 
       font = {
