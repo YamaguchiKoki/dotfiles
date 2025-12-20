@@ -2,9 +2,11 @@
   programs.alacritty = {
     enable = true;
     settings = {
-      import = [
-        "${pkgs.alacritty-theme}/miasma.toml"
-      ];
+      general = {
+        import = [
+          "${pkgs.alacritty-theme}/miasma.toml"
+        ];
+      };
 
       live_config_reload = true;
 
