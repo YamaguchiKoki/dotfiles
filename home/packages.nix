@@ -22,6 +22,6 @@
     tree
     uv
     typescript
-    dotnetCorePackages.sdk_9_0_1xx-bin
+    dotnetCorePackages.sdk_10_0-bin
   ];
 }
