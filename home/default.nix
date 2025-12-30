@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, lib, ... }: {
   # Import all modules
   imports = [
     ./packages.nix
@@ -32,42 +32,66 @@
    # SSH設定: OpenSSHを有効化して ~/.ssh/config を宣言的に管理
   programs.ssh = {
     enable = true;
+    # Suppress deprecation warning
+    enableDefaultConfig = false;
+
     # 必要なら knownHosts を明示
     # knownHosts = {
     #   "ssh.dev.azure.com".publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAI...";
     # };
-    extraConfig = ''
-      Host ssh.dev.azure.com
-        HostName ssh.dev.azure.com
-        User git
-        IdentityFile ~/.ssh/azure_devops_business
-        AddKeysToAgent yes
-        UseKeychain yes
 
-      # 任意: GitHub等を使うならこちらも
-      Host github.com
-        HostName github.com
-        User git
-        AddKeysToAgent yes
-        UseKeychain yes
-        IdentityFile ~/.ssh/id_ed25519
-    '';
+    matchBlocks = {
+      # Default settings for all hosts
+      "*" = {
+        forwardAgent = false;
+        serverAliveInterval = 0;
+        serverAliveCountMax = 3;
+        compression = false;
+        addKeysToAgent = "no";
+        hashKnownHosts = false;
+        userKnownHostsFile = "~/.ssh/known_hosts";
+        controlMaster = "no";
+        controlPath = "~/.ssh/master-%r@%n:%p";
+        controlPersist = "no";
+      };
+
+      "ssh.dev.azure.com" = {
+        hostname = "ssh.dev.azure.com";
+        user = "git";
+        identityFile = "~/.ssh/azure_devops_business";
+        addKeysToAgent = "yes";
+        extraOptions = {
+          UseKeychain = "yes";
+        };
+      };
+
+      "github.com" = {
+        hostname = "github.com";
+        user = "git";
+        identityFile = "~/.ssh/id_ed25519";
+        addKeysToAgent = "yes";
+        extraOptions = {
+          UseKeychain = "yes";
+        };
+      };
+    };
   };
 
   # 初回だけ鍵をssh-agent＋Keychainへ登録する（存在チェック付きで冪等）
   # macOS限定の --apple-use-keychain を使う
-  home.activation.addSshKeys = pkgs.lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    KEY="${HOME}/.ssh/azure_devops_business"
+  home.activation.addSshKeys = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    KEY="$HOME/.ssh/azure_devops_business"
     if [ -f "$KEY" ]; then
-      # ssh-agent を起動（既に起動済みでもOK）
-      eval "$(${pkgs.openssh}/bin/ssh-agent -s)"
-      # すでにagentに載っているか確認
-      if ! ${pkgs.openssh}/bin/ssh-add -l | grep -q "$KEY"; then
-        # Keychainに保存しつつ追加（この時だけパスフレーズ入力が必要）
-        ${pkgs.openssh}/bin/ssh-add --apple-use-keychain "$KEY" || true
+      # macOSのシステム ssh/ssh-agent/ssh-add を使う（Keychain対応）
+      eval "$(/usr/bin/ssh-agent -s)"
+      if ! /usr/bin/ssh-add -l 2>/dev/null | grep -q "$KEY"; then
+        /usr/bin/ssh-add --apple-use-keychain "$KEY" || true
       fi
     fi
   '';
+
+
+
 
   # Copy dotfiles that don't have native Home Manager support
   home.file = {
