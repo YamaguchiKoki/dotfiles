@@ -27,5 +27,6 @@
     pkgs.shopify-cli
     pkgs.sqlcmd
     pkgs.yazi
+    pkgs.helix
   ];
 }
