@@ -25,5 +25,7 @@
     dotnetCorePackages.sdk_9_0-bin
     azure-cli
     pkgs.shopify-cli
+    pkgs.sqlcmd
+    pkgs.yazi
   ];
 }
