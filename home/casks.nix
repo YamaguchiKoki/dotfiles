@@ -15,7 +15,7 @@
     ghostty
 
     # ユーティリティ
-    cheatsheet
+    # cheatsheet  # 注意: 現在ダウンロードURLが404エラーになっているためコメントアウト
 
     # ブラウザ
     # google-chrome
