@@ -7,17 +7,10 @@
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    brew-nix = {
-      url = "github:BatteredBunny/brew-nix";
-      inputs.brew-api.follows = "brew-api";
-    };
-    brew-api = {
-      url = "github:BatteredBunny/brew-api";
-      flake = false;
-    };
+    nix-homebrew.url = "github:zhaofengli/nix-homebrew";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, brew-nix, brew-api }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew }:
   let
     configuration = { pkgs, ... }: {
       # List packages installed in system profile. To search by name, run:
@@ -56,13 +49,15 @@
       modules = [
         configuration
         ./system/defaults.nix
-        # Configure nixpkgs with brew-nix overlay
+        ./system/homebrew.nix
+        nix-homebrew.darwinModules.nix-homebrew
         {
-          nixpkgs.overlays = [
-            (final: prev: {
-              brewCasks = brew-nix.packages.${prev.system};
-            })
-          ];
+          nix-homebrew = {
+            enable = true;
+            enableRosetta = true;
+            user = "kokiyamaguchi";
+            autoMigrate = true;
+          };
         }
         home-manager.darwinModules.home-manager
         {

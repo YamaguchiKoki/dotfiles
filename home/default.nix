@@ -2,7 +2,6 @@
   # Import all modules
   imports = [
     ./packages.nix
-    ./casks.nix
     ./programs/git.nix
     ./programs/zsh.nix
     ./programs/starship.nix
