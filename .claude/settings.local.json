@@ -2,7 +2,16 @@
   "permissions": {
     "allow": [
       "Bash(tree:*)",
-      "Bash(nix flake show:*)"
+      "Bash(nix flake show:*)",
+      "Bash(fc-list:*)",
+      "Bash(open:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(nix search:*)",
+      "WebSearch",
+      "Bash(mkdir:*)",
+      "Bash(mdimport:*)",
+      "Bash(xattr:*)",
+      "Bash(mdfind:*)"
     ]
   }
 }
