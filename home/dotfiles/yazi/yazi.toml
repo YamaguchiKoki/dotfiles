@@ -1,0 +1,15 @@
+# Yazi メイン設定ファイル
+
+[opener]
+# デフォルトのエディタをhelixに設定
+edit = [
+  { run = 'hx "$@"', block = true, for = "unix" },
+]
+
+# テキストファイルの関連付け
+[open]
+rules = [
+  { mime = "text/*", use = "edit" },
+  { mime = "application/json", use = "edit" },
+  { mime = "application/x-yaml", use = "edit" },
+]

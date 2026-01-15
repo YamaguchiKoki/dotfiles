@@ -7,7 +7,9 @@
 
     shellAliases = {
       ls = "ls -F --color=auto";
-      vim = "nvim";
+      vim = "hx";      # vimコマンドでhelixを起動
+      vi = "hx";       # viコマンドでhelixを起動
+      nvim = "hx";     # nvimコマンドでhelixを起動
       czg = "cz";
       ll = "ls -l";
       la = "ls -A";
@@ -49,7 +51,8 @@
       export LC_CTYPE="''${LANGUAGE}"
 
       # Editor
-      export EDITOR=vim
+      export EDITOR=hx
+      export VISUAL=hx
       export CVSEDITOR="''${EDITOR}"
       export SVN_EDITOR="''${EDITOR}"
       export GIT_EDITOR="''${EDITOR}"
