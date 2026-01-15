@@ -1,5 +1,11 @@
 # Yazi メイン設定ファイル
 
+[manager]
+# 隠しファイルを表示
+show_hidden = true
+# シンボリックリンクを表示
+show_symlink = true
+
 [opener]
 # デフォルトのエディタをhelixに設定
 edit = [

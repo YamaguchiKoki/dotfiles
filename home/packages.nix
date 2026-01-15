@@ -54,5 +54,6 @@
 
     # Lua
     lua-language-server               # Lua言語サーバー
+    pkgs.inetutils
   ];
 }
