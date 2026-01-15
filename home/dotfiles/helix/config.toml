@@ -1,0 +1,35 @@
+# Helix エディタ設定
+# yazi / helix / lazygit 連携設定
+
+# テーマ設定
+theme = "default"
+
+# エディタ設定
+[editor]
+line-number = "relative"
+cursorline = true
+auto-save = true
+color-modes = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+# キーバインド設定
+[keys.normal]
+# Ctrl+y で yazi を開く（ファイルマネージャー連携）
+C-y = [
+  ':sh rm -f /tmp/yazi-helix-$(whoami)',
+  ':insert-output yazi "%{buffer_name}" --chooser-file=/tmp/yazi-helix-$(whoami)',
+  ':sh printf "\\x1b[?1049h\\x1b[?2004h" > /dev/tty',
+  ':open %sh{cat /tmp/yazi-helix-$(whoami)}',
+  ':redraw',
+]

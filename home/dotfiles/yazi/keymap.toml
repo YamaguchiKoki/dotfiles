@@ -1,0 +1,11 @@
+# Yazi ファイルマネージャー キーバインド設定
+# yazi / helix / lazygit 連携設定
+
+[manager]
+prepend_keymap = [
+  # Ctrl+g で lazygit を開く（Git 操作）
+  { on = ["<C-g>"], run = "shell --block -- lazygit" },
+
+  # Ctrl+e で helix を開く（カレントディレクトリで編集）
+  { on = ["<C-e>"], run = "shell --block -- hx ." },
+]

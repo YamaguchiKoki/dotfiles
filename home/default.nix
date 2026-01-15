@@ -97,5 +97,9 @@
   home.file = {
     ".config/nvim".source = ./dotfiles/nvim;
     ".czrc".source = ./dotfiles/czrc;
+
+    # yazi / helix / lazygit 連携設定
+    ".config/helix/config.toml".source = ./dotfiles/helix/config.toml;
+    ".config/yazi/keymap.toml".source = ./dotfiles/yazi/keymap.toml;
   };
 }

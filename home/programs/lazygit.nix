@@ -2,6 +2,13 @@
   programs.lazygit = {
     enable = true;
     settings = {
+      # yazi / helix / lazygit 連携設定
+      # lazygit から helix でファイルを編集
+      os = {
+        edit = "hx {{filename}}";
+        editAtLine = "hx {{filename}}:{{line}}";
+      };
+
       customCommands = [
         {
           command = "/etc/profiles/per-user/kokiyamaguchi/bin/git-cz";
