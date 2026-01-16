@@ -1,0 +1,13 @@
+# Helix言語サーバー設定
+
+# Liquid (Shopify)
+[[language]]
+name = "liquid"
+scope = "source.liquid"
+file-types = ["liquid"]
+comment-token = "{%"
+language-servers = ["shopify-theme-check"]
+
+[language-server.shopify-theme-check]
+command = "theme-check-language-server"
+args = []

@@ -100,6 +100,7 @@
 
     # yazi / helix / lazygit 連携設定
     ".config/helix/config.toml".source = ./dotfiles/helix/config.toml;
+    ".config/helix/languages.toml".source = ./dotfiles/helix/languages.toml;
     ".config/yazi/keymap.toml".source = ./dotfiles/yazi/keymap.toml;
     ".config/yazi/yazi.toml".source = ./dotfiles/yazi/yazi.toml;
   };
