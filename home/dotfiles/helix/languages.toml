@@ -9,5 +9,10 @@ comment-token = "{%"
 language-servers = ["shopify-theme-check"]
 
 [language-server.shopify-theme-check]
-command = "theme-check-language-server"
-args = []
+command = "shopify"
+args = ["theme", "language-server"]
+
+# Liquid grammar (tree-sitter)
+[[grammar]]
+name = "liquid"
+source = { git = "https://github.com/hankthetank27/tree-sitter-liquid", rev = "main" }
