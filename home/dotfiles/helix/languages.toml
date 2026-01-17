@@ -1,5 +1,32 @@
 # Helix言語サーバー設定
 
+# TOML
+[[language]]
+name = "toml"
+language-servers = ["taplo"]
+
+[language-server.taplo]
+command = "taplo"
+args = ["lsp", "stdio"]
+
+# YAML
+[[language]]
+name = "yaml"
+language-servers = ["yaml-language-server"]
+
+[language-server.yaml-language-server]
+command = "yaml-language-server"
+args = ["--stdio"]
+
+# JSON
+[[language]]
+name = "json"
+language-servers = ["vscode-json-language-server"]
+
+[language-server.vscode-json-language-server]
+command = "vscode-json-language-server"
+args = ["--stdio"]
+
 # Liquid (Shopify)
 [[language]]
 name = "liquid"

@@ -48,6 +48,9 @@
     # YAML
     yaml-language-server              # YAML言語サーバー
 
+    # TOML
+    taplo                             # TOML言語サーバー
+
     # Nix
     nil                               # Nix言語サーバー
     nixd                              # Nix言語サーバー（代替）
