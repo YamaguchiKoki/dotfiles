@@ -1,13 +1,13 @@
 format = """
-[](fg:#d3d7cf)\
+[](fg:#d4c5b9)\
 $os\
 $username\
-[](fg:#d3d7cf bg:#3465a4)\
+[](fg:#d4c5b9 bg:#bdae9d)\
 $directory\
-[](fg:#3465a4 bg:#4e9a06)\
+[](fg:#bdae9d bg:#8b7355)\
 $git_branch\
 $git_status\
-[](fg:#4e9a06)\
+[](fg:#8b7355)\
 $fill\
 $c\
 $direnv\
@@ -24,7 +24,7 @@ $python\
 $rust\
 $scala\
 $docker_context\
-[](fg:#d3d7cf)\
+[](fg:#7a8450)\
 $time\
 $cmd_duration
 󱞪
@@ -39,8 +39,8 @@ command_timeout = 1000
 # and use the os module below
 [username]
 show_always = true
-style_user = "bg:#d3d7cf fg:black"
-style_root = "bg:#d3d7cf fg:bold red"
+style_user = "bg:#d4c5b9 fg:#2a211c"
+style_root = "bg:#c5656b fg:bold black"
 format = '[$user ]($style)'
 disabled = false
 
@@ -51,7 +51,7 @@ style = "bg:#9A348E"
 disabled = true # Disabled by default
 
 [directory]
-style = "bg:#3465a4"
+style = "bg:#bdae9d fg:#2a211c"
 format = "[  $path ]($style)"
 truncation_length = 10
 truncation_symbol = "…/"
@@ -72,11 +72,11 @@ read_only = '🔒'
 
 [git_branch]
 symbol = ""
-style = "bg:#4e9a06 fg:#000000"
+style = "bg:#8b7355 fg:#f5f5dc"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:#4e9a06 fg:#000000"
+style = "bg:#8b7355 fg:#f5f5dc"
 format = '[$all_status$ahead_behind ]($style)'
 
 [fill]
@@ -85,11 +85,11 @@ symbol = " "
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "fg:#000000 bg:#d3d7cf"
+style = "fg:#2a211c bg:#7a8450"
 format = '[ $time ]($style)'
 
 [cmd_duration]
-style = "fg:#d3d7cf bg:#000000"
+style = "fg:#bdae9d bg:#000000"
 format = "[took $duration]($style) "
 
 [c]
