@@ -2,7 +2,7 @@
 # yazi / helix / lazygit 連携設定
 
 # テーマ設定
-theme = "default"
+theme = "espresso-libre"
 
 # エディタ設定
 [editor]

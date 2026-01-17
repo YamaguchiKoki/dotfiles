@@ -1,0 +1,80 @@
+# Espresso Libre theme for Helix
+# Matching Ghostty's Espresso Libre color scheme
+
+# UI colors
+"ui.background" = { bg = "background" }
+"ui.text" = { fg = "foreground" }
+"ui.cursor" = { fg = "background", bg = "cursor" }
+"ui.cursor.match" = { fg = "background", bg = "orange" }
+"ui.selection" = { bg = "selection" }
+"ui.linenr" = { fg = "comment" }
+"ui.linenr.selected" = { fg = "foreground" }
+"ui.statusline" = { fg = "foreground", bg = "statusline" }
+"ui.statusline.inactive" = { fg = "comment", bg = "background" }
+"ui.popup" = { fg = "foreground", bg = "line-highlight" }
+"ui.window" = { fg = "comment" }
+"ui.help" = { fg = "foreground", bg = "line-highlight" }
+"ui.menu" = { fg = "foreground", bg = "line-highlight" }
+"ui.menu.selected" = { fg = "background", bg = "blue" }
+
+# Syntax highlighting
+"comment" = { fg = "comment", modifiers = ["italic"] }
+"constant" = { fg = "green" }
+"constant.numeric" = { fg = "orange" }
+"constant.character.escape" = { fg = "cyan" }
+"string" = { fg = "yellow" }
+"variable" = { fg = "foreground" }
+"variable.parameter" = { fg = "orange" }
+"variable.builtin" = { fg = "purple" }
+"function" = { fg = "blue" }
+"function.macro" = { fg = "cyan" }
+"keyword" = { fg = "purple" }
+"keyword.control" = { fg = "purple" }
+"operator" = { fg = "foreground" }
+"type" = { fg = "blue-light" }
+"namespace" = { fg = "blue" }
+"tag" = { fg = "blue" }
+"attribute" = { fg = "cyan" }
+"special" = { fg = "orange" }
+"markup.heading" = { fg = "blue", modifiers = ["bold"] }
+"markup.list" = { fg = "purple" }
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.link.url" = { fg = "cyan", modifiers = ["underlined"] }
+"markup.link.text" = { fg = "blue" }
+"markup.quote" = { fg = "green" }
+"markup.raw" = { fg = "orange" }
+
+"diff.plus" = { fg = "green" }
+"diff.minus" = { fg = "red" }
+"diff.delta" = { fg = "blue" }
+
+"diagnostic.error" = { underline = { color = "red", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "yellow", style = "curl" } }
+"diagnostic.info" = { underline = { color = "blue", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "comment", style = "curl" } }
+
+"error" = { fg = "red" }
+"warning" = { fg = "yellow" }
+"info" = { fg = "blue" }
+"hint" = { fg = "comment" }
+
+# Color palette based on Espresso Libre
+[palette]
+background = "#2a211c"
+foreground = "#bdae9d"
+selection = "#3a312c"
+line-highlight = "#3a312c"
+statusline = "#3a312c"
+cursor = "#889aff"
+comment = "#7a7267"
+
+# ANSI colors from Espresso Libre
+red = "#cc0000"
+green = "#1a921c"
+yellow = "#f0e53a"
+orange = "#f97820"
+blue = "#0066ff"
+blue-light = "#43a8ed"
+purple = "#c5656b"
+cyan = "#06989a"

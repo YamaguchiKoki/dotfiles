@@ -103,6 +103,7 @@
     ".config/helix/config.toml".source = ./dotfiles/helix/config.toml;
     ".config/helix/languages.toml".source = ./dotfiles/helix/languages.toml;
     ".config/helix/runtime".source = ./dotfiles/helix/runtime;
+    ".config/helix/themes".source = ./dotfiles/helix/themes;
     ".config/yazi/keymap.toml".source = ./dotfiles/yazi/keymap.toml;
     ".config/yazi/yazi.toml".source = ./dotfiles/yazi/yazi.toml;
   };
