@@ -1,4 +1,10 @@
 { pkgs, config, ... }: {
+  # zoxide設定
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -6,14 +12,20 @@
     dotDir = "${config.xdg.configHome}/zsh";
 
     shellAliases = {
-      ls = "ls -F --color=auto";
+      # eza (modern ls replacement)
+      ls = "eza --icons";
+      ll = "eza -l --icons --git";
+      la = "eza -a --icons";
+      lla = "eza -la --icons --git";
+      tree = "eza --tree --icons";
+
+      # エディタ
       vim = "hx";      # vimコマンドでhelixを起動
       vi = "hx";       # viコマンドでhelixを起動
       nvim = "hx";     # nvimコマンドでhelixを起動
+
+      # その他
       czg = "cz";
-      ll = "ls -l";
-      la = "ls -A";
-      lla = "ls -l -A";
       lg = "lazygit";
     };
 
