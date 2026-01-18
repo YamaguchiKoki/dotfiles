@@ -22,6 +22,26 @@
   # Enable font management
   fonts.fontconfig.enable = true;
 
+  # macOS defaults
+  targets.darwin.defaults = {
+    # スクリーンショットの設定
+    "com.apple.screencapture" = {
+      # 保存先ディレクトリ
+      location = "~/Pictures/Screenshots";
+      # ファイル名にタイムスタンプを含める
+      "include-date" = true;
+      # ファイルフォーマット (png, jpg, pdf, tiff)
+      type = "png";
+      # 影を含めない
+      "disable-shadow" = false;
+    };
+  };
+
+  # スクリーンショット保存用ディレクトリを作成
+  home.activation.createScreenshotDir = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    mkdir -p "$HOME/Pictures/Screenshots"
+  '';
+
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
