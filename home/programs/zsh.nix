@@ -55,6 +55,7 @@
       # Path
       export PATH=''${HOME}/.local/bin:$PATH
       export PATH="/usr/local/sbin:$PATH"
+      export PATH=''${HOME}/.cache/.bun/bin:$PATH
 
       # Lang
       export LANGUAGE="en_US.UTF-8"

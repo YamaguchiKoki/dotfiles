@@ -60,5 +60,7 @@
     pkgs.inetutils
 
     pkgs.eza
+    pkgs.nmap
+    pkgs.bun
   ];
 }
