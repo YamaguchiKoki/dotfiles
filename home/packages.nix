@@ -63,5 +63,6 @@
     pkgs.nmap
     pkgs.bun
     pkgs.clojure
+    pkgs.leiningen
   ];
 }
