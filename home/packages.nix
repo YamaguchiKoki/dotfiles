@@ -62,5 +62,6 @@
     pkgs.eza
     pkgs.nmap
     pkgs.bun
+    pkgs.clojure
   ];
 }
