@@ -23,8 +23,7 @@
     uv
     typescript
     dotnetCorePackages.sdk_9_0-bin
-    azure-cli
-    pkgs.shopify-cli
+    # pkgs.shopify-cli  # ビルドエラーのため一時的に無効化
     pkgs.sqlcmd
     pkgs.yazi
     pkgs.helix
@@ -64,5 +63,9 @@
     pkgs.bun
     pkgs.clojure
     pkgs.leiningen
+    pkgs.direnv
+    pkgs.nix-direnv
+    pkgs.python313Packages.pip
+    pkgs.cargo
   ];
 }

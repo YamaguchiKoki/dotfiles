@@ -101,6 +101,8 @@
         esac
         pwd
       }
+       eval "$(mise activate zsh)"
+       eval "$(direnv hook zsh)"
     '';
   };
 }
