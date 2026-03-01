@@ -67,5 +67,6 @@
     pkgs.nix-direnv
     pkgs.python313Packages.pip
     pkgs.cargo
+    pkgs.git-wt
   ];
 }

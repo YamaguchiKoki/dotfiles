@@ -56,6 +56,7 @@
       export PATH=''${HOME}/.local/bin:$PATH
       export PATH="/usr/local/sbin:$PATH"
       export PATH=''${HOME}/.cache/.bun/bin:$PATH
+      export PATH=''${HOME}/.cargo/bin:$PATH
 
       # Lang
       export LANGUAGE="en_US.UTF-8"
@@ -103,6 +104,14 @@
       }
        eval "$(mise activate zsh)"
        eval "$(direnv hook zsh)"
+       eval "$(git wt --init zsh)"
+
+      # git-wt + fzf integration
+      wt() {
+        local branch
+        branch=$(git wt | tail -n +2 | awk '{print $(NF-1)}' | fzf)
+        [[ -n "$branch" ]] && git wt "$branch"
+      }
     '';
   };
 }

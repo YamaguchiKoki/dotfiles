@@ -9,6 +9,7 @@
       ".idea/"
       "*.iml"
       ".vscode/"
+      ".worktrees/"
     ];
 
     settings = {
@@ -31,6 +32,10 @@
 
       ghq = {
         root = "/Users/kokiyamaguchi/Documents/projects/git";
+      };
+
+      wt = {
+        basedir = ".worktrees";
       };
 
       merge = {
