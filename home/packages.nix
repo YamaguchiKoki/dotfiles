@@ -68,5 +68,7 @@
     pkgs.python313Packages.pip
     pkgs.cargo
     pkgs.git-wt
+    pkgs.terraform
+    pkgs.zellij
   ];
 }

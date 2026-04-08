@@ -20,6 +20,7 @@
 
       # ユーティリティ
       "keyclu"  # キーボードショートカット表示ツール
+      "libreoffice"
 
       # 以下に使いたいアプリを追加してください
       # 例:
@@ -33,8 +34,12 @@
     # Homebrew Formulae（CLIツール）
     # Nixで利用できないツールのみここに追加することを推奨
     brews = [
-      # 例:
-      # "mas"  # Mac App Store CLI
+      "azure-cli"
+      "gogcli"
+      "lima"
+      "mc"
+      "mongosh"
+      "yq"
     ];
 
     # Homebrew Taps（追加のリポジトリ）
