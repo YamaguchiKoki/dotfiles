@@ -15,7 +15,11 @@
       "WebFetch(domain:ghostty.org)",
       "Bash(mdls:*)",
       "Bash(plutil:*)",
-      "Bash(defaults read:*)"
+      "Bash(defaults read:*)",
+      "WebFetch(domain:qiita.com)",
+      "Bash(nix eval:*)",
+      "Bash(nix-instantiate --eval -E '\\(import <nixpkgs> {}\\).zellij.version')",
+      "Bash(nix flake:*)"
     ]
   }
 }

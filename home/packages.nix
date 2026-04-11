@@ -15,7 +15,7 @@
     ripgrep
     neovim
     nodejs
-    nodePackages.pnpm
+    pnpm
     cz-cli
     protobuf
     starship
@@ -35,8 +35,8 @@
     delve                             # Goデバッガー
 
     # TypeScript/JavaScript
-    nodePackages.typescript-language-server  # TypeScript言語サーバー
-    nodePackages.vscode-langservers-extracted  # HTML/CSS/JSON/ESLint言語サーバー
+    typescript-language-server  # TypeScript言語サーバー
+    vscode-langservers-extracted  # HTML/CSS/JSON/ESLint言語サーバー
 
     # C#
     omnisharp-roslyn                  # C#言語サーバー
