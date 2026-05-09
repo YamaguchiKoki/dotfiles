@@ -70,5 +70,6 @@
     pkgs.git-wt
     pkgs.terraform
     pkgs.zellij
+    pkgs.go-task
   ];
 }

@@ -38,6 +38,8 @@
     # クリップボードの読み書きを許可
     clipboard-read = allow
     clipboard-write = allow
+    # zellij等のマウスキャプチャ中でも Shift+drag / Shift+click で端末ネイティブ選択
+    mouse-shift-capture = always
 
     # --- Keybindings ---
     keybind = shift+enter=text:\x0a

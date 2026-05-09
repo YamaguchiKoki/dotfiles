@@ -6,6 +6,7 @@
     ./programs/zsh.nix
     ./programs/starship.nix
     ./programs/lazygit.nix
+    ./programs/lazydocker.nix
     ./programs/nodejs.nix
     ./programs/alacritty.nix
     ./programs/tmux.nix
