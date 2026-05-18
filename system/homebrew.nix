@@ -23,6 +23,9 @@
       "libreoffice"
       "raycast"
 
+      # 開発ツール
+      "codex"  # OpenAI Codex CLI（npm 経由は証明書失効問題を踏むので cask 経由）
+
       # 以下に使いたいアプリを追加してください
       # 例:
       # "google-chrome"
