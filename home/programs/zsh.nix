@@ -84,16 +84,16 @@
       unsetopt list_types
 
       # C++ Include Path
-      export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:$HOME/Documents/projects/git/personal/ac-library"
+      export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:$HOME/projects/git/personal/ac-library"
 
       # Custom function
       qcd() {
         case "$1" in
           p)
-            cd $HOME/Documents/projects/git/personal
+            cd $HOME/projects/git/personal
             ;;
           b)
-            cd $HOME/Documents/projects/git/business
+            cd $HOME/projects/git/business
             ;;
           *)
             echo "qcd: unknown key $1"

@@ -31,7 +31,7 @@
       };
 
       ghq = {
-        root = "/Users/kokiyamaguchi/Documents/projects/git";
+        root = "/Users/kokiyamaguchi/projects/git";
       };
 
       wt = {

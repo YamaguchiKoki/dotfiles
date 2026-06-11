@@ -44,9 +44,9 @@
     # --- Keybindings ---
     keybind = shift+enter=text:\x0a
     keybind = global:cmd+shift+space=toggle_quick_terminal
-    # Zellij passthrough: Ghostty の split shortcut を zellij に渡す
-    keybind = cmd+d=unbind
-    keybind = cmd+shift+d=unbind
+    # Split: cmd+d で横分割（右）、cmd+shift+d で縦分割（下）
+    keybind = cmd+d=new_split:right
+    keybind = cmd+shift+d=new_split:down
 
     macos-option-as-alt = true
   '';
