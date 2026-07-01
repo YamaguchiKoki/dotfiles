@@ -13,9 +13,22 @@ edit = [
 ]
 
 # テキストファイルの関連付け
+# prepend_rules を使うことで yazi のデフォルトルール（末尾の catch-all フォールバック含む）を残しつつ、
+# これらを優先的にマッチさせる。rules を直接書くとデフォルトが丸ごと消えるので注意。
 [open]
-rules = [
+prepend_rules = [
+  # 拡張子ベース（MIME 判定に依存しない。.ts が video/mp2t 誤判定されるのを回避）
+  { name = "*.ts", use = "edit" },
+  { name = "*.tsx", use = "edit" },
+  { name = "*.js", use = "edit" },
+  { name = "*.jsx", use = "edit" },
+  { name = "*.mjs", use = "edit" },
+  { name = "*.cjs", use = "edit" },
+  { name = "*.vue", use = "edit" },
+  { name = "*.svelte", use = "edit" },
+  # MIME ベース
   { mime = "text/*", use = "edit" },
   { mime = "application/json", use = "edit" },
   { mime = "application/x-yaml", use = "edit" },
+  { mime = "application/javascript", use = "edit" },
 ]

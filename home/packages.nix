@@ -72,5 +72,6 @@
     pkgs.zellij
     pkgs.go-task
     pkgs.stripe-cli
+    pkgs.ghc
   ];
 }
