@@ -106,6 +106,17 @@
        eval "$(direnv hook zsh)"
        eval "$(git wt --init zsh)"
 
+      # Markdown ライブプレビュー（herdr等で別ペインに開いて使う）
+      # 使い方: mdp file.md  → 保存のたびに glow で再描画
+      mdp() {
+        local file="$1"
+        if [[ -z "$file" ]]; then
+          echo "usage: mdp <file.md>"
+          return 1
+        fi
+        watchexec -w "$file" -r -c -- glow "$file"
+      }
+
       # git-wt + fzf integration
       wt() {
         local branch

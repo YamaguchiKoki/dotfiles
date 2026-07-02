@@ -128,5 +128,8 @@
     ".config/helix/themes".source = ./dotfiles/helix/themes;
     ".config/yazi/keymap.toml".source = ./dotfiles/yazi/keymap.toml;
     ".config/yazi/yazi.toml".source = ./dotfiles/yazi/yazi.toml;
+    # yazi プレビュー欄で Markdown を glow レンダリング（piper 経由）
+    # glow.yazi は deprecated のため公式の汎用プラグイン piper を使用
+    ".config/yazi/plugins/piper.yazi".source = pkgs.yaziPlugins.piper;
   };
 }

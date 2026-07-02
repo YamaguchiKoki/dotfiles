@@ -15,6 +15,14 @@ edit = [
 # テキストファイルの関連付け
 # prepend_rules を使うことで yazi のデフォルトルール（末尾の catch-all フォールバック含む）を残しつつ、
 # これらを優先的にマッチさせる。rules を直接書くとデフォルトが丸ごと消えるので注意。
+[plugin]
+# Markdown はプレビュー欄で glow レンダリング表示（piper 経由）
+# yazi 26.x では previewer のマッチキーは `name` ではなく `url`
+prepend_previewers = [
+  { url = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"' },
+  { url = "*.markdown", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"' },
+]
+
 [open]
 prepend_rules = [
   # 拡張子ベース（MIME 判定に依存しない。.ts が video/mp2t 誤判定されるのを回避）

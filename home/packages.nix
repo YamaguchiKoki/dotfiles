@@ -43,6 +43,9 @@
 
     # Markdown
     marksman                          # Markdown言語サーバー
+    mpls                              # Markdownプレビュー言語サーバー（ブラウザにライブプレビュー）
+    glow                              # 端末内Markdownレンダラー
+    watchexec                         # ファイル変更監視（ライブプレビュー用）
 
     # YAML
     yaml-language-server              # YAML言語サーバー
