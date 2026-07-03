@@ -32,6 +32,16 @@ args = ["--stdio"]
 name = "markdown"
 language-servers = ["marksman", "mpls"]
 
+# marksman は nixpkgs(darwin) の ICU 不整合で通常起動すると SIGABRT で即死する
+# （ラッパーが ICU を LD_LIBRARY_PATH で渡すが macOS は無視するため）。
+# .NET のグローバリゼーションを invariant にして ICU 依存を回避する。
+[language-server.marksman]
+command = "marksman"
+args = ["server"]
+
+[language-server.marksman.environment]
+DOTNET_SYSTEM_GLOBALIZATION_INVARIANT = "1"
+
 [language-server.mpls]
 command = "mpls"
 
