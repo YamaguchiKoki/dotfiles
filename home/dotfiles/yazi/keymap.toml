@@ -1,7 +1,8 @@
 # Yazi ファイルマネージャー キーバインド設定
 # yazi / helix / lazygit 連携設定
 
-[manager]
+# yazi 26.x で [manager] は [mgr] にリネームされた（旧名は無視される）
+[mgr]
 prepend_keymap = [
   # Ctrl+g で lazygit を開く（Git 操作）
   { on = ["<C-g>"], run = "shell --block -- lazygit" },

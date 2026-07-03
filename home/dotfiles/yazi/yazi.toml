@@ -1,6 +1,7 @@
 # Yazi メイン設定ファイル
 
-[manager]
+# yazi 26.x で [manager] は [mgr] にリネームされた（旧名は無視される）
+[mgr]
 # 隠しファイルを表示
 show_hidden = true
 # シンボリックリンクを表示
@@ -26,14 +27,15 @@ prepend_previewers = [
 [open]
 prepend_rules = [
   # 拡張子ベース（MIME 判定に依存しない。.ts が video/mp2t 誤判定されるのを回避）
-  { name = "*.ts", use = "edit" },
-  { name = "*.tsx", use = "edit" },
-  { name = "*.js", use = "edit" },
-  { name = "*.jsx", use = "edit" },
-  { name = "*.mjs", use = "edit" },
-  { name = "*.cjs", use = "edit" },
-  { name = "*.vue", use = "edit" },
-  { name = "*.svelte", use = "edit" },
+  # yazi 26.x でマッチキーは name → url にリネームされた
+  { url = "*.ts", use = "edit" },
+  { url = "*.tsx", use = "edit" },
+  { url = "*.js", use = "edit" },
+  { url = "*.jsx", use = "edit" },
+  { url = "*.mjs", use = "edit" },
+  { url = "*.cjs", use = "edit" },
+  { url = "*.vue", use = "edit" },
+  { url = "*.svelte", use = "edit" },
   # MIME ベース
   { mime = "text/*", use = "edit" },
   { mime = "application/json", use = "edit" },
