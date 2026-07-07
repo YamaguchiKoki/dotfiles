@@ -12,6 +12,7 @@
     ./programs/tmux.nix
     ./programs/ghostty.nix
     ./programs/zellij.nix
+    ./programs/hunk.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should manage.

@@ -117,6 +117,20 @@
         watchexec -w "$file" -r -c -- glow "$file"
       }
 
+      # hpr <PR番号> : GitHub PR の差分を hunk でレビュー
+      # gh pr diff は GitHub API 経由で 20000 行超のPRが 406 too_large で失敗するため、
+      # ローカル git で差分を作って hunk に流す（checkout 不要・行数制限なし）。
+      hpr() {
+        local num="$1" base
+        if [[ -z "$num" ]]; then
+          echo "usage: hpr <PR番号>"
+          return 1
+        fi
+        base=$(gh pr view "$num" --json baseRefName -q .baseRefName) || return 1
+        git fetch -q origin "$base" "refs/pull/$num/head:refs/hpr/$num" || return 1
+        git diff --no-color "origin/$base...refs/hpr/$num" | hunk patch -
+      }
+
       # git-wt + fzf integration
       wt() {
         local branch
