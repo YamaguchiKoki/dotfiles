@@ -2,6 +2,7 @@
   home.packages = with pkgs; [
     nerd-fonts.hack
     fzf
+    bat  # sg のプレビュー用
     gcc
     gh
     ghq

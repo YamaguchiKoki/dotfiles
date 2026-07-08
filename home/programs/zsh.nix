@@ -5,6 +5,11 @@
     enableZshIntegration = true;
   };
 
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;  # Ctrl-R 履歴 / Ctrl-T ファイル補完
+  };
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -136,6 +141,20 @@
         local branch
         branch=$(git wt | tail -n +2 | awk '{print $(NF-1)}' | fzf)
         [[ -n "$branch" ]] && git wt "$branch"
+      }
+
+      # sg <query> : ripgrep ライブ grep → 選択行を helix の該当行で開く
+      # yazi や space+/ を経由せず、⌘⇧Space のクイックターミナルから即検索できる。
+      sg() {
+        local q="$*"
+        local rg='rg --column --line-number --no-heading --color=always --smart-case'
+        FZF_DEFAULT_COMMAND="$rg -- \"$q\"" \
+          fzf --ansi --disabled --query "$q" \
+              --bind "change:reload:$rg -- {q} || true" \
+              --bind "enter:become(hx {1}:{2})" \
+              --delimiter : \
+              --preview 'bat --color=always {1} --highlight-line {2} --style=numbers,changes' \
+              --preview-window 'right,60%,border-left,+{2}+3/3'
       }
     '';
   };
