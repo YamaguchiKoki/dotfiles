@@ -44,6 +44,8 @@
     # --- Keybindings ---
     keybind = shift+enter=text:\x0a
     keybind = global:cmd+shift+space=toggle_quick_terminal
+    # フォーカスが外れても閉じない（Raycastのスニペット/クリップボード履歴を挟んでも維持）
+    quick-terminal-autohide = false
     # Split: cmd+d で横分割（右）、cmd+shift+d で縦分割（下）
     keybind = cmd+d=new_split:right
     keybind = cmd+shift+d=new_split:down
