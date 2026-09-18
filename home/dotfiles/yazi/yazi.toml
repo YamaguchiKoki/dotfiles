@@ -28,6 +28,10 @@ prepend_previewers = [
 prepend_rules = [
   # 拡張子ベース（MIME 判定に依存しない。.ts が video/mp2t 誤判定されるのを回避）
   # yazi 26.x でマッチキーは name → url にリネームされた
+  # .env 系は中身次第で mime が text/* から外れ（例: application/octet-stream）、
+  # mime ルールを素通りして macOS の `open`（関連付けアプリ）に落ちるため拡張子で拾う
+  { url = ".env*", use = "edit" },
+  { url = "*.env", use = "edit" },
   { url = "*.ts", use = "edit" },
   { url = "*.tsx", use = "edit" },
   { url = "*.js", use = "edit" },

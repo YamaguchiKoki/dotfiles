@@ -136,6 +136,30 @@
         git diff --no-color "origin/$base...refs/hpr/$num" | hunk patch -
       }
 
+      # hdiff [base] [-- <pathspec...>] : 今のブランチを GitHub PR と同じ見え方で hunk レビュー
+      # base (省略時は origin のデフォルトブランチ) との merge-base からの差分を表示する。
+      # = PR の Files changed 相当 + 未コミット/未追跡の変更も含む。--watch で編集に追従。
+      hdiff() {
+        local base mb
+        if [[ -n "$1" && "$1" != "--" ]]; then
+          base="$1"; shift
+        else
+          base=$(git symbolic-ref --quiet --short refs/remotes/origin/HEAD 2>/dev/null)
+          if [[ -z "$base" ]]; then
+            for base in origin/main origin/master main master ""; do
+              git rev-parse --verify -q "$base" >/dev/null && break
+            done
+          fi
+        fi
+        if [[ -z "$base" ]]; then
+          echo "hdiff: base branch が見つかりません (usage: hdiff [base])"
+          return 1
+        fi
+        mb=$(git merge-base "$base" HEAD) || return 1
+        echo "hdiff: $base...HEAD (merge-base ''${mb:0:7}) + working tree"
+        hunk diff --watch "$mb" "$@"
+      }
+
       # git-wt + fzf integration
       wt() {
         local branch
