@@ -27,9 +27,9 @@ jobs:
             This PR updates the flake.lock file with the latest versions of dependencies.
 
             ### Changed inputs
-            - nixpkgs
-            - nix-darwin
-            - home-manager
+            ```
+            {{ env.GIT_COMMIT_MESSAGE }}
+            ```
 
             Please review the changes and test the configuration before merging.
 
