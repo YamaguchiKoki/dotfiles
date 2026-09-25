@@ -9,8 +9,9 @@ show_symlink = true
 
 [opener]
 # デフォルトのエディタをhelixに設定
+# yazi 26.x ではシェル引数 "$@" は展開されず、%s（選択ファイル群）/ %s1 などのプレースホルダを使う
 edit = [
-  { run = 'hx "$@"', block = true, for = "unix" },
+  { run = "hx %s", desc = "helix", block = true, for = "unix" },
 ]
 
 # テキストファイルの関連付け
