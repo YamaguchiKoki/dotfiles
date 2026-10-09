@@ -43,6 +43,7 @@
       "lima"
       "mc"
       "mongosh"
+      "openssl@4" # mongosh(node) の依存。cleanup="zap" で削除されそうになるため明示
       "yq"
     ];
 
