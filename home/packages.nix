@@ -77,5 +77,6 @@
     pkgs.go-task
     pkgs.stripe-cli
     pkgs.ghc
+    pkgs.tabiew
   ];
 }

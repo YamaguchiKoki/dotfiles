@@ -32,6 +32,7 @@
       # その他
       czg = "cz";
       lg = "lazygit";
+      hq = "harlequin";
     };
 
 
