@@ -14,6 +14,7 @@
     ./programs/zellij.nix
     ./programs/hunk.nix
     ./programs/harlequin.nix
+    ./programs/atuin.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should manage.

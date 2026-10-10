@@ -7,7 +7,8 @@
 
   programs.fzf = {
     enable = true;
-    enableZshIntegration = true;  # Ctrl-R 履歴 / Ctrl-T ファイル補完
+    enableZshIntegration = true;  # Ctrl-T ファイル補完
+    historyWidget.command = "";  # Ctrl-R は atuin に任せる (programs/atuin.nix)
   };
 
   programs.zsh = {
