@@ -19,6 +19,7 @@
       "ghostty"
 
       # ユーティリティ
+      "google-japanese-ime"  # Google 日本語入力（入力ソースへの追加は手動）
       "keyclu"  # キーボードショートカット表示ツール
       "libreoffice"
       "raycast"

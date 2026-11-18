@@ -27,6 +27,15 @@
         home = "/Users/kokiyamaguchi";
       };
 
+      # eMudhra 中間CA鍵漏洩 (CVE-2026-111943) の影響ルートを Nix の CA バンドルから除外
+      # NixOS 側の対応: https://github.com/NixOS/nixpkgs/pull/576390
+      security.pki.caCertificateBlacklist = [
+        "Comodo AAA Services root"
+        "emSign ECC Root CA - G3"
+        "emSign Root CA - C1"
+        "emSign ECC Root CA - C3"
+      ];
+
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
 
