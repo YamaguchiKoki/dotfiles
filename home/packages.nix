@@ -80,5 +80,6 @@
     pkgs.tabiew
     pkgs.jnv  # 対話的な JSON / GeoJSON 探索 (jq フィルタを打ちながら確認)
     pkgs.gradle
+    pkgs.jdk
   ];
 }
