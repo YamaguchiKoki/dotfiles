@@ -39,6 +39,12 @@
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
 
+      # /etc/zshrc で compinit が走ると home-manager 側の compinit と fpath が食い違い、
+      # 毎回 .zcompdump を作り直して起動が ~0.6s 遅くなる。compinit は home-manager に任せる。
+      programs.zsh.enableGlobalCompInit = false;
+      # プロンプトは starship を使うので /etc/zshrc の `prompt suse` は不要
+      programs.zsh.promptInit = "";
+
       # Enable alternative shell support in nix-darwin.
       # programs.fish.enable = true;
 
